@@ -25,3 +25,10 @@
         flex-direction: column;
     }
 } 
+@media (max-width: 767px) and (min-width: 320px){
+    .tech{
+        flex-direction: column;
+        padding-bottom: 36px;
+        padding-top: 32px;
+    }
+}

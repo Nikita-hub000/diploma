@@ -18,4 +18,16 @@ var swipere = new Swiper('.swiper-container', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+      }
+
+    }
   });

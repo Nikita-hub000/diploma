@@ -1,0 +1,10 @@
+.news__button_white{
+    background: #fff;
+    display: flex;
+    margin: 64px auto 80px;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .news__button_white{
+        margin: 32px auto 40px;
+    }
+}

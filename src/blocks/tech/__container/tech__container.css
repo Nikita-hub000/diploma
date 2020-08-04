@@ -27,3 +27,18 @@
         margin-left: 104px;
     }
 }
+@media (max-width: 767px) and (min-width: 320px){
+    .tech__container{
+        margin-right: 34px;
+
+    }
+    .tech__container:nth-of-type(2n){
+        margin-left: 0;
+    }
+    .tech__container:first-of-type{
+        margin-left: 0;
+    }
+    .tech__container:last-of-type{
+        margin-right: 34px;
+    }
+}

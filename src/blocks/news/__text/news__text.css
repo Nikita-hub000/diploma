@@ -4,3 +4,8 @@
     display: flex;
     margin-bottom: 8px;
 }
+@media (max-width: 499px) and (min-width: 320px){
+    .news__text{
+        display: none;
+    }
+}
