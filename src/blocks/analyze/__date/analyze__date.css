@@ -4,8 +4,11 @@ font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 80px;
-/* or 444% */
-
-/* main/black */
+min-width: 50px;
 color: #1A1B22;
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .analyze__date{
+        line-height: 48px;
+    }
 }

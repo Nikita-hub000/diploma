@@ -4,3 +4,13 @@
     justify-content: space-around;
     
 }
+@media (max-width: 900px) and (min-width: 768px){
+    .analyze__box{
+        margin-left: 67px;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .analyze__box{
+        display: none;
+    }
+}

@@ -10,3 +10,17 @@
     padding-top: 80px;
     padding-bottom: 116px;
 }
+@media (max-width: 900px) and (min-width: 768px){
+    .analyze{
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .analyze{
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-bottom: 32px;
+    }
+}
