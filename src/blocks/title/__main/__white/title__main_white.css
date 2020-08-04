@@ -1,0 +1,22 @@
+.title__main_white{
+    color: #fff;
+    margin-top: 80px;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+}
+
+@media (max-width: 900px) and (min-width: 768px){
+    .title__main_white{
+        margin-top: 40px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+@media (max-width: 700px) and (min-width: 320px){
+    .title__main_white{
+        margin-top: 30px;   
+        font-size: 36px;
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,12 @@
+@import url(./__box/analyze__box.css);
+@import url(./__container/analyze__container.css);
+@import url(./__text/analyze__text.css);
+@import url(./__date/analyze__date.css);
+@import url(./__block/analyze__block.css);
+@import url(./__blockcontainer/analyze__blockcontainer.css);
+.analyze{
+    background: #F5F6F7;
+    padding-left: 104px;
+    padding-top: 80px;
+    padding-bottom: 116px;
+}

@@ -1,0 +1,14 @@
+@import url(./__white/text__white.css);
+@import url(./__white_button/text__white_button.css);
+@import url(./__black/text__black.css);
+@import url(./__vertical/text__vertical.css);
+@import url(./__grey/text__grey.css);
+@import url(./__ask/text__ask.css);
+.text{
+    font-family: 'Roboto-Regular';
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.tech__text{
+    margin-left: 104px;
+    max-width: 344px;
+    margin-top: 0;
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .tech__text{
+        margin-left: 40px;
+        max-width: 336px;
+    }
+}

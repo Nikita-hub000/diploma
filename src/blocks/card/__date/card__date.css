@@ -1,0 +1,17 @@
+.card__date{
+    font-family: 'Source';
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #B6BCBF;
+margin: 20px auto 0;
+max-width: 352px;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .card__date{
+        max-width: 192px;
+    }
+}

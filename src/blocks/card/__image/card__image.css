@@ -1,0 +1,12 @@
+.card__image{
+    max-width: 400px;
+    min-height: 272px;
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .card__image{
+        max-width: 224px;
+        min-height: 150px;
+    }
+}

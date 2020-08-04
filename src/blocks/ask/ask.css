@@ -1,0 +1,14 @@
+@import url(./__grey/ask__grey.css);
+@import url(./__bold/ask__bold.css);
+.ask{
+   margin-bottom: 80px;
+   margin-top: 40px;
+   margin-left: 104px;
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .ask{
+        margin-left: 40px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+}

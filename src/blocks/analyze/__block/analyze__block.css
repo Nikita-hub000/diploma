@@ -1,0 +1,10 @@
+.analyze__block{
+    background: #2F71E5;
+    height: 24px;
+    margin-top: 74px;
+    align-items: center;
+    display: flex;
+}
+.analyze__block:first-of-type{
+    margin-top: 0;
+}

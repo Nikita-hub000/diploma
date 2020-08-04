@@ -1,0 +1,11 @@
+@import url(./__header/title__header.css);
+@import url(./__main/title__main.css);
+@import url(./__author/title__author.css);
+@import url(./__client/title__client.css);
+@import url(./__error/title__error.css);
+@import url(./__ask/title__ask.css);
+@import url(./__analyze/title__analyze.css);
+.title{
+font-family: "Roboto-Slab";
+font-style: normal;
+}

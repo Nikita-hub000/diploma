@@ -1,0 +1,20 @@
+@import url(./__date/card__date.css);
+@import url(./__footer/card__footer.css);
+@import url(./__heading/card__heading.css);
+@import url(./__image/card__image.css);
+@import url(./__text/card__text.css);
+.card{
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+.card:hover{
+    cursor: pointer;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .card{
+        max-width: 224px;
+    }
+}

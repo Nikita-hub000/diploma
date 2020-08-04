@@ -1,0 +1,6 @@
+.slider__container{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    
+}

@@ -1,0 +1,21 @@
+.title__author{
+    font-size: 40px;
+line-height: 46px;
+color: #1A1B22;
+margin-bottom: 24px;
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .title__author{
+    margin-bottom: 16px;
+    font-size: 30px;
+line-height: 40px;
+    }
+}
+@media (max-width: 700px) and (min-width: 320px){
+    .title__author{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 16px;
+        margin-top: 24px;
+    }
+}
