@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Nikita-hub000.github.io/diploma/",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -18,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/Nikita-hub000/diploma/issues"
   },
-  "homepage": "https://Nikita-hub000.github.io/diploma/",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
