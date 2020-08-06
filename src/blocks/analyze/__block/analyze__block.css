@@ -27,7 +27,7 @@
 .analyze__block:nth-of-type(7){
     width: 368px;
 }
-@media (max-width: 900px) and (min-width: 768px){
+@media (max-width: 1030px) and (min-width: 768px){
     .analyze__block:first-of-type{
         width: 85px;
     }
