@@ -8,6 +8,7 @@ z-index: 1;
 margin-left: -168px;
 }
 .button:focus{
+    box-shadow: 0 0 0 2pt blue;
     outline: none;
 }
 .button:hover{
