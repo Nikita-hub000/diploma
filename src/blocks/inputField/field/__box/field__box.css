@@ -1,0 +1,9 @@
+.field__box{
+    display:flex;
+    flex-direction:row; 
+}
+@media (max-width: 700px) and (min-width: 320px){
+    .field__box{
+        flex-direction: column;
+    }
+}

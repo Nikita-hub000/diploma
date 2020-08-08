@@ -1,0 +1,16 @@
+.slider__author{
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@media (max-width: 1040px) and (min-width: 320px){
+    .slider__author{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

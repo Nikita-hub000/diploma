@@ -1,0 +1,13 @@
+@import url(./__box/news__box.css);
+@import url(./__container/news__container.css);
+@import url(./__header/news__header.css);
+@import url(./__button/news__button.css);
+@import url(./__arr/news__arr.css);
+@import url(./__text/news__text.css);
+.news{
+ display: flex;
+ flex-direction: column;
+ margin: 0 auto 0;
+ background: #F5F6F7;
+ max-width: 1440px;
+}

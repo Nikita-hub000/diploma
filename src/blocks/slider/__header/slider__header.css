@@ -1,0 +1,9 @@
+@import url(./_black/slider__header_black.css);
+@import url(./_white/slider__header_white.css);
+.slider__header{
+    font-family: "Roboto-Regular";
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+}

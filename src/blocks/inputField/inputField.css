@@ -1,0 +1,22 @@
+@import url(../inputField/field/field.css);
+@import url(../inputField/boxVertical/box-vertical.css);
+@import url(../inputField/button/button.css);
+@import url(./input-box/input-box.css);
+.inputField{
+    background-image: url(../../images/iphone.png);
+    background-repeat: no-repeat;
+    padding-bottom: 45px;
+    max-width: 1440px;
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .inputField{
+        max-width: 900px;
+        background-position: center;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .inputField{
+        padding-bottom: 32px;
+        background-position: center;
+    }
+}

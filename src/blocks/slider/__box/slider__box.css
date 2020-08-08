@@ -1,0 +1,7 @@
+.slider__box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    margin-left: 24px;
+    max-width: 352px;
+}

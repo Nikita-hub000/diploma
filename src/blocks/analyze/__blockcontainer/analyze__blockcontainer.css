@@ -1,0 +1,7 @@
+.analyze__blockcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    justify-content: center;
+    max-width: 816px;
+}

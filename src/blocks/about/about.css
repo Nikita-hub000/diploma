@@ -1,0 +1,24 @@
+@import url(./__grey/about__grey.css);
+@import url(./__white/about__white.css);
+@import url(./__black/about__black.css);
+@import url(./__diagramm/about__diagramm.css);
+.about{
+font-family: 'Roboto-Regular';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+margin-right: 34px;
+text-decoration: none;
+}
+.about:last-of-type{
+    margin-right: 0;
+}
+@media (max-width: 700px) and (min-width: 320px){
+    .about{
+        font-size: 16px;
+        line-height: 24px; 
+        margin-right: 11px;
+    }
+}

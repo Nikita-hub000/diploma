@@ -1,0 +1,7 @@
+.analyze__text_grey{
+    color: #B6BCBF;
+    margin-left: 25px;
+}
+.analyze__text_grey:first-of-type{
+    margin-left: 0;
+}

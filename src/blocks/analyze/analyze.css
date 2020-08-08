@@ -1,0 +1,26 @@
+@import url(./__box/analyze__box.css);
+@import url(./__container/analyze__container.css);
+@import url(./__text/analyze__text.css);
+@import url(./__date/analyze__date.css);
+@import url(./__block/analyze__block.css);
+@import url(./__blockcontainer/analyze__blockcontainer.css);
+.analyze{
+    background: #F5F6F7;
+    padding-left: 104px;
+    padding-top: 80px;
+    padding-bottom: 116px;
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .analyze{
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .analyze{
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-bottom: 32px;
+    }
+}

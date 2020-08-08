@@ -1,0 +1,15 @@
+@import url(./_grey/analyze__text_grey.css);
+@import url(./_white/analyze__text_white.css);
+.analyze__text{
+    font-family: "Roboto-Regular";
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.4px;
+text-transform: uppercase;
+
+}
+.analyze__text:first-of-type{
+    max-width: 90px; 
+}

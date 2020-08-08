@@ -1,0 +1,17 @@
+.news__box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 80px 104px 0;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .news__box{
+        margin: 40px 40px 0;
+    }
+}
+@media (max-width: 700px) and (min-width: 320px){
+    .news__box{
+        flex-direction: column;
+        margin: 32px 16px 36px;
+    }
+}

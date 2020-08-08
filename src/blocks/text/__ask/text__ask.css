@@ -1,0 +1,7 @@
+.text__ask{
+    display: flex;
+    margin-top: 0;
+}
+.text__ask:last-of-type{
+    margin-top: 4px;
+}

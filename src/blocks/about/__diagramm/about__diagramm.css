@@ -1,0 +1,8 @@
+.about__diagramm{
+    color: #B6BCBF;
+    text-decoration: none;
+}
+.about__diagramm:hover{
+    color: #1A1B22;
+    cursor: pointer;
+}

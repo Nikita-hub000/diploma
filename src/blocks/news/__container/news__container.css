@@ -1,0 +1,12 @@
+.news__container{
+    margin: 64px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .news__container{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 36px;
+    }
+}

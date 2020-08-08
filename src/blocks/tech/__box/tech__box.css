@@ -1,0 +1,19 @@
+.tech__box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 840px;
+    margin-right: 216px;
+}
+@media (max-width: 1260px) and (min-width: 768px){
+    .tech__box{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .tech__box{
+        flex-wrap: wrap;
+        margin: 40px auto 0;
+        max-width: 500px;
+    }
+}
