@@ -5,7 +5,7 @@
 @import url(./__arr/news__arr.css);
 @import url(./__text/news__text.css);
 .news{
- display: flex;
+ display: none;
  flex-direction: column;
  margin: 0 auto 0;
  background: #F5F6F7;
