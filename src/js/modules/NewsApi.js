@@ -8,9 +8,11 @@ export default class NewsApi {
       this.request = null;
       this.searchBar = document.querySelector('.field'); // инпут
       this.body = body;
+      console.log('ccc')
   }
 
   getNews() {
+      console.log('gg')
       this.request = this.searchBar.value
       return fetch(`${this.url}q=${this.request}&pageSize=100&from=2020-08-01&language=ru&apiKey=${this.apiKey}`, {
               method: "GET",
@@ -22,6 +24,10 @@ export default class NewsApi {
               } else {
                   return Promise.reject(`Ошибка: ${res.status}`)
               }
+          })
+          .catch(x => {
+              x = 'hello'
+              console.log(x)
           })
   }
 

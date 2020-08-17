@@ -1,4 +1,3 @@
-
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,7 +9,12 @@ const isDev = process.env.NODE_ENV === 'development';
 
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { 
+        main: './src/index.js',
+        about: './src/about.js',
+        analytic: './src/analytic.js'
+    
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'

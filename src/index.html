@@ -22,10 +22,10 @@
        <div class="box-vertical">
         <h1 class="title title__main_white">Что в мире творится?</h1>
         <p class="text text__white">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-        <div class="field__box">
+        <form class="field__box">
           <input type="text" pattern="^[а-яА-ЯёЁ]+$" placeholder="Введите тему новости" class="field" required>
           <button class="button text text__white_button">Искать</button>
-        </div>
+        </form>
        </div>
          </section>
          <section class="preloader">
@@ -43,7 +43,7 @@
            <a href="./about.html" class="text news__text">Посмотреть аналитику <img class="news__arr" src="<%=require('./images/back.png').default%>" alt="arrow"></a>
            </div>
            <div class="news__container">
-             <!-- <div class="card">
+            <!-- <div class="card">
                <img class="card__image" src="<%=require('./images/image_08.png').default%>" alt="image">
                <div>
                <p class="card__date">2 августа, 2019</p>
@@ -51,8 +51,8 @@
                <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                <p class="card__footer">Лента.ру</p>
               </div>
-             </div>
-             <div class="card">
+             </div> -->
+               <!--<div class="card">
               <img class="card__image" src="<%=require('./images/image_04.png').default%>" alt="image">
               <div>
               <p class="card__date">2 августа, 2019</p>
@@ -100,6 +100,56 @@
            </div>
            <button class="news__button news__button_white">Показать еще</button>
          </section>
+         <section class="slider">
+          <div class="news__box">
+            <h1 class="news__header">История коммитов из GitHub</h1>
+            <a href="https://github.com/Nikita-hub000/diploma" class="text news__text news__text_none">Открыть в Github <img class="news__arr" src="<%=require('./images/back.png').default%>" alt="arrow"></a>
+            </div>
+                      <!-- Slider main container -->
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <!-- <div class="swiper-slide">
+                            <p class="slider__header slider__header_white">14 августа, 2019</p>
+                            <div class="slider__box">
+                              <img src="<%=require('./images/image-slider1.png').default%>" alt="author" class="swiper__img">
+                              <div class="slider__container">
+                                <h2 class="slider__author">Антон Долинин</h2>
+                                <p class="slider__header slider__header_black">anton@yandex.ru</p>
+                              </div>
+                            </div>
+                            <p class="slider__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <p class="slider__header slider__header_white">14 августа, 2019</p>
+                            <div class="slider__box">
+                              <img src="<%=require('./images/image-slider1.png').default%>" alt="author" class="swiper__img">
+                              <div class="slider__container">
+                                <h2 class="slider__author">Мария Фёдорова</h2>
+                                <p class="slider__header slider__header_black">mariiifed@yandex.ru</p>
+                              </div>
+                            </div>
+                            <p class="slider__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet plugin.</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <p class="slider__header slider__header_white">14 августа, 2019</p>
+                            <div class="slider__box">
+                              <img src="<%=require('./images/image-slider1.png').default%>" alt="author" class="swiper__img">
+                              <div class="slider__container">
+                                <h2 class="slider__author">Инга Иванова</h2>
+                                <p class="slider__header slider__header_black">ingaiva@yandex.ru</p>
+                              </div>
+                            </div>
+                            <p class="slider__text">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                          </div> -->
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                       <button class="news__button news__button_none">Открыть в Github</button>
+        </section>
          <section class="author"> 
           <img src="<%=require('./images/image-03.png').default%>" alt="Lapshin Nikita" class="image">
           <div class="box__author">
@@ -120,6 +170,6 @@
                <a class="footer__logo" href="#"><img src="<%=require('./images/fb.png').default%>" alt="Facebook" class="footer__logo"></a>
              </nav>
           </footer>
-    
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>

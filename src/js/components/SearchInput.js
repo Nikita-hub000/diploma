@@ -1,3 +1,5 @@
+import { LIST, BAR } from "../constants/const"
+import {list} from '../../index'
 export default class SearchInput{
     constructor(list, body, newsApi, searchButton, newsListFunction, notNews, finding, result, button, more_button){
         this.button = button
@@ -12,20 +14,22 @@ export default class SearchInput{
         this.newsApi = newsApi
         this.searchButton = searchButton
         this.newsListFunction = newsListFunction
+        console.log('qqqqqq')
     }
-    submitNews(event){
+    submitNews(){
         event.preventDefault();
-        this.result.style.display = 'none'
-        this.notNews.style.display = 'none'
-        this.list.innerHTML = ''
-        this.finding.style.display = 'flex'
-        this.newsListFunction.render()
-        localStorage.setItem('searchQuery', this.searchButton.value)
+        document.querySelector('.news').style.display = 'none'
+        document.querySelector('.error').style.display = 'none'
+        localStorage.removeItem('searchQuery') 
+        LIST.innerHTML = ''
+        document.querySelector('.preloader').style.display = 'flex'
+        list.render()
+        localStorage.setItem('searchQuery', BAR.value)
     }
     moreNews(){
         console.log('d')
-        this.finding.style.display = "flex";
-        this.newsCardList.save()
-        this.finding.style.display = "none";
+        document.querySelector('.preloader').style.display = "flex";
+        list.save()
+        document.querySelector('.preloader').style.display = "none";
     }  
 }

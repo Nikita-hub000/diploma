@@ -5,7 +5,7 @@
 @import url(./__text/card__text.css);
 .card{
     display: flex;
-    max-width: 400px;
+    width: 400px;
     flex-direction: column;
     background: #FFFFFF;
     border-radius: 16px;
