@@ -1,7 +1,6 @@
 export default class CommitCard{
     constructor(data){
         this.data= data;
-        console.log("aaa")
     }
     create(){
         const commit = document.createElement('div')

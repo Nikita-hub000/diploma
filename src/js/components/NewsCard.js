@@ -2,6 +2,14 @@ export default class NewsCard{
     constructor(data){
         this.data= data;
     }
+    // функция для простановки правильной даты
+    times(str){
+        // массив с шаблонными месяцами
+        const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        const date = new Date(str);
+        this.day = `${date.getDate()} ${month[date.getMonth()]}, ${date.getFullYear()}г.`
+        return this.day
+    }
     create(){
         const card = document.createElement('div');
         const cardImage = document.createElement('img');
@@ -17,7 +25,7 @@ export default class NewsCard{
         cardLink.setAttribute('href', this.data.url)
         cardImage.setAttribute('src', this.data.urlToImage);
         cardDate.classList.add('card__date')
-        cardDate.textContent = this.data.publishedAt
+        cardDate.textContent = this.times(this.data.publishedAt)
         cardHead.classList.add('card__heading')
         cardHead.textContent = this.data.title;
         cardText.classList.add('card__text')

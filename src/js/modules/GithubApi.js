@@ -1,10 +1,10 @@
 export default class GithubApi{
     constructor(options) {
         this.url = options.baseUrl;
-        this.getCardsCommits()
+        this.getCommits()
     }
 
-    getCardsCommits() {
+    getCommits() {
         return fetch(`${this.url}/commits`, {
                 method: "GET",
                 headers: this.headers,

@@ -1,6 +1,6 @@
-import swiper from 'swiper/bundle';
+import Swiper from 'swiper/bundle';
 export default function ActivateSwiper() {
-    var swipere = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 16,
     // slidesPerGroup: 3,

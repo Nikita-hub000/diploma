@@ -1,9 +1,9 @@
 export default class Statistics {
-    constructor(container, localParse, statisticsResult, statisticsMentioning) {
+    constructor(container, local, statisticsResult, statisticsMentioning) {
         this.template = document.querySelector('#tabel-schedule').content;
-        this.container = container; // обертка графиков
+        this.container = container; 
         this.date = new Date();
-        this.localParse = localParse; // res.articles
+        this.local = local; 
         this.request = statisticsResult;
         this.statisticsMentioning = statisticsMentioning;
         this.start = 0;
@@ -11,16 +11,17 @@ export default class Statistics {
         this.addCard();
         this.sortArrayRes()
     }
-    getWeekDay = () => {
+    getWeekDay(){
         const days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
         return days[this.date.getDay()];
     }
-    times = (str) => {
+    times(str){
+        // шаблон для проставлении даты
         const date = new Date(str);
         this.time = `${date.getDate()} ${date.getMonth()} ${date.getFullYear()}`
         return this.time
     }
-    checkArray = (arr) => {
+    checkArray(arr){
         const searchValue = localStorage.getItem('searchQuery').toLocaleLowerCase();
         const ar = []
         arr.forEach(item => {
@@ -39,30 +40,30 @@ export default class Statistics {
         }
         return this.sum
     }
-    count = (array, day) => {
+    count(array, day){
         this.dayArray = array.filter(item => this.times(item.publishedAt) == this.times(day));
         this.bla = this.checkArray(this.dayArray)
         return this.bla
     }
 
-    sortArrayRes = () => {
+    sortArrayRes(){
         while (this.start < this.end) {
             this.week = this.date;
             this.week = this.date.setDate(this.date.getDate() - 1);
             this.start += 1;
-            this.textRectange = this.count(this.localParse, this.week);
+            this.textRectange = this.count(this.local, this.week);
             this.addCard(this.textRectange)
         }
     }
 
-    create = (number) => {
+    create(number){
         this.view = this.template.cloneNode(true).children[0];
         this.view.querySelector('.tabel__date').textContent = `${this.date.getDate()}, ${this.getWeekDay()}`;
         this.view.querySelector('.tabel__rectange').textContent = number
         this.view.querySelector('.tabel__rectange').style.width = `${number}%`
         return this.view;
     }
-    addCard = (number) => {
+    addCard(number){
         this.container.append(this.create(number))
     }
 }

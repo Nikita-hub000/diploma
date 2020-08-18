@@ -1,22 +1,22 @@
 export default class CommitCardList{
-    constructor(container, createCommitCard, githubApi, initSwiper) {
-        this.container = container;
+    constructor(container, createCommitCard, gitApi, Swiper) {
+        this.Swiper = Swiper;
         this.createCommitCard = createCommitCard;
-        this.githubApi = githubApi;
-        this.initSwiper = initSwiper;
+        this.container = container;
+        this.gitApi = gitApi;
         this.render()
     }
     add(data){
         this.container.append(this.createCommitCard(data).create())
     }
     render(){
-        this.githubApi.getCardsCommits()
+        this.gitApi.getCommits()
             .then(res => {
                 res.forEach(item => this.add(item));
-                this.initSwiper()
+                this.Swiper()
             })
             .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
+                console.log(err); 
             });
     }
 }
