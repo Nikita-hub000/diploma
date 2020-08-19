@@ -20,11 +20,11 @@ export default class SearchInput{
         event.preventDefault();
         document.querySelector('.news').style.display = 'none'
         document.querySelector('.error').style.display = 'none'
-        localStorage.removeItem('searchQuery') 
+        localStorage.removeItem('search') 
         LIST.innerHTML = ''
         document.querySelector('.preloader').style.display = 'flex'
         list.render()
-        localStorage.setItem('searchQuery', BAR.value)
+        localStorage.setItem('search', BAR.value)
     }
     moreNews(){
         console.log('d')

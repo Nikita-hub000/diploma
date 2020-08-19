@@ -1,15 +1,65 @@
 export default class Statistics {
-    constructor(container, local, statisticsResult, statisticsMentioning) {
-        this.template = document.querySelector('#tabel-schedule').content;
+    constructor(container, local) {
         this.container = container; 
         this.date = new Date();
         this.local = local; 
-        this.request = statisticsResult;
-        this.statisticsMentioning = statisticsMentioning;
-        this.start = 0;
+        this.begin = 0;
         this.end = 7;
-        this.addCard();
+        this.addCardStat();
         this.sortArrayRes()
+    }
+    checkAr(massiv){
+        const mas = []
+        massiv.forEach(item => {
+            mas.push(item.title);
+            mas.push(item.description);
+        })
+        this.sum = 0;
+        const find = localStorage.getItem('search').toLocaleLowerCase();
+        for (let i = 0; i < mas.join().toLowerCase().split(' ').length; i++) {
+            if (mas.join().toLowerCase().split(' ')[i] == find) {
+                this.sum += 1;
+            } else {
+                this.container.querySelector('.analyze__text_white').textContent = 0
+                this.container.querySelector('.analyze__block').style.width = "0%"
+            }
+        }
+        return this.sum
+    }
+    count(mas, today){
+        this.dayArray = mas.filter(x => this.times(x.publishedAt) == this.times(today));
+        return this.checkAr(this.dayArray)
+    }
+
+    sortArrayRes(){
+        while (this.begin < this.end) {
+            this.begin += 1;
+            this.week = this.date;
+            this.week = this.date.setDate(this.date.getDate() - 1);
+            this.textRectange = this.count(this.local, this.week);
+            this.addCardStat(this.textRectange)
+        }
+    }
+    create(number){
+        const dates = document.createElement('p')
+        const square = document.createElement('div')
+        const num = document.createElement('p')
+        const item = document.createElement('div')
+        dates.classList.add('analyze__date')
+        item.classList.add('analyze__item')
+        dates.textContent = `${this.date.getDate()}, ${this.getWeekDay()}`;
+        square.classList.add('analyze__block')
+        square.style.width = `${number}%`
+        num.classList.add('analyze__text')
+        num.classList.add('analyze__text_white')
+        num.textContent = number
+        square.appendChild(num)
+        item.appendChild(dates)
+        item.append(square)
+        return item;
+    }
+    addCardStat(number){
+        this.container.append(this.create(number))
     }
     getWeekDay(){
         const days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
@@ -20,50 +70,5 @@ export default class Statistics {
         const date = new Date(str);
         this.time = `${date.getDate()} ${date.getMonth()} ${date.getFullYear()}`
         return this.time
-    }
-    checkArray(arr){
-        const searchValue = localStorage.getItem('searchQuery').toLocaleLowerCase();
-        const ar = []
-        arr.forEach(item => {
-            ar.push(item.title);
-            ar.push(item.description);
-        })
-        const newAr = ar.join().toLowerCase().split(' ');
-        this.sum = 0;
-        for (let i = 0; i < newAr.length; i++) {
-            if (newAr[i] == searchValue) {
-                this.sum += 1;
-            } else {
-                this.container.querySelector('.tabel__rectange').textContent = 0
-                this.container.querySelector('.tabel__rectange').style.width = "0%"
-            }
-        }
-        return this.sum
-    }
-    count(array, day){
-        this.dayArray = array.filter(item => this.times(item.publishedAt) == this.times(day));
-        this.bla = this.checkArray(this.dayArray)
-        return this.bla
-    }
-
-    sortArrayRes(){
-        while (this.start < this.end) {
-            this.week = this.date;
-            this.week = this.date.setDate(this.date.getDate() - 1);
-            this.start += 1;
-            this.textRectange = this.count(this.local, this.week);
-            this.addCard(this.textRectange)
-        }
-    }
-
-    create(number){
-        this.view = this.template.cloneNode(true).children[0];
-        this.view.querySelector('.tabel__date').textContent = `${this.date.getDate()}, ${this.getWeekDay()}`;
-        this.view.querySelector('.tabel__rectange').textContent = number
-        this.view.querySelector('.tabel__rectange').style.width = `${number}%`
-        return this.view;
-    }
-    addCard(number){
-        this.container.append(this.create(number))
     }
 }
