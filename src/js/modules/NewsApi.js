@@ -1,20 +1,19 @@
 
 export default class NewsApi {
-  constructor(options, body) {
+  constructor(options, body, from, apiKey) {
       this.url = options.baseUrl;
-      this.apiKey = '071e7d98f5164693bd3f576b8d54a51f';
-      this.from = '2020-08-01';
+      this.apiKey = apiKey;
       this.headers = options.headers;
       this.request = null;
-      this.searchBar = document.querySelector('.field'); // инпут
       this.body = body;
+      this.from = from
       console.log('ccc')
   }
 
-  getNews() {
+  getNews(){
       console.log('gg')
-      this.request = this.searchBar.value
-      return fetch(`${this.url}q=${this.request}&pageSize=100&from=2020-08-01&language=ru&apiKey=${this.apiKey}`, {
+      this.request = document.querySelector('.field').value
+      return fetch(`${this.url}q=${this.request}&pageSize=100&${this.from}&language=ru&apiKey=${this.apiKey}`, {
               method: "GET",
               headers: this.headers,
           })
@@ -22,12 +21,8 @@ export default class NewsApi {
               if (res.ok) {
                   return res.json()
               } else {
-                  return Promise.reject(`Ошибка: ${res.status}`)
+                  return Promise.reject(`Произошла ошибка: ${res.status}`)
               }
-          })
-          .catch(x => {
-              x = 'hello'
-              console.log(x)
           })
   }
 

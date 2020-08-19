@@ -1,7 +1,7 @@
 .news__button_none{
     border: 1px solid #1A1B22;
 }
-@media (max-width: 2000px) and (min-width: 500px){
+@media (max-width: 5000px) and (min-width: 500px){
     .news__button_none{
         display: none;
     }

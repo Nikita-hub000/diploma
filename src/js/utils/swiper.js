@@ -1,9 +1,8 @@
 import Swiper from 'swiper/bundle';
 export default function ActivateSwiper() {
-    var swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 16,
-    // slidesPerGroup: 3,
     loop: true,
   
     pagination: {

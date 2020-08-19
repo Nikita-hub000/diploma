@@ -16,9 +16,5 @@ export default class GithubApi{
                     return Promise.reject(`Ошибка: ${res.status}`)
                 }
             })
-            .catch(x => {
-                x ="Error"
-                console.log("Error")
-            })
     }
 }

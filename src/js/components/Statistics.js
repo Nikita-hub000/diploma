@@ -8,16 +8,16 @@ export default class Statistics {
         this.addCardStat();
         this.sortArrayRes()
     }
-    checkAr(massiv){
-        const mas = []
-        massiv.forEach(item => {
-            mas.push(item.title);
-            mas.push(item.description);
+    checkAr(arr){
+        const array = []
+        arr.forEach(item => {
+            array.push(item.title);
+            array.push(item.description);
         })
         this.sum = 0;
         const find = localStorage.getItem('search').toLocaleLowerCase();
         for (let i = 0; i < mas.join().toLowerCase().split(' ').length; i++) {
-            if (mas.join().toLowerCase().split(' ')[i] == find) {
+            if (array.join().toLowerCase().split(' ')[i] == find) {
                 this.sum += 1;
             } else {
                 this.container.querySelector('.analyze__text_white').textContent = 0
@@ -26,8 +26,8 @@ export default class Statistics {
         }
         return this.sum
     }
-    count(mas, today){
-        this.dayArray = mas.filter(x => this.times(x.publishedAt) == this.times(today));
+    count(arr, today){
+        this.dayArray = arr.filter(x => this.times(x.publishedAt) == this.times(today));
         return this.checkAr(this.dayArray)
     }
 
