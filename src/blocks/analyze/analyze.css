@@ -4,6 +4,7 @@
 @import url(./__date/analyze__date.css);
 @import url(./__block/analyze__block.css);
 @import url(./__blockcontainer/analyze__blockcontainer.css);
+@import url(./__item/analyze__item.css);
 .analyze{
     background: #F5F6F7;
     padding-left: 104px;

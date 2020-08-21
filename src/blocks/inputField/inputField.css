@@ -5,8 +5,9 @@
 .inputField{
     background-image: url(../../images/iphone.png);
     background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 45px;
-    max-width: 1440px;
+
 }
 @media (max-width: 900px) and (min-width: 768px){
     .inputField{

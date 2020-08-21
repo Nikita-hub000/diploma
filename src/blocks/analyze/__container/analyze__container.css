@@ -1,8 +1,9 @@
 .analyze__container{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    margin-top: 8px; 
 }
 .analyze__container:first-of-type{
     box-shadow: inset 0px -1px 0px  #1A1B22;
+    flex-direction: row;
 }

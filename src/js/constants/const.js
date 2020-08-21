@@ -1,0 +1,15 @@
+export const MAIN_API_URL = 'https://api.newsapp.ga';
+export const NEWS_API_URL = 'https://praktikum.tk/news/v2/everything?';
+export const NEWS_API_TOKEN = 'e0601510cc4543dfb6160589db7bf1ea';
+export const NEWS_API_DAYS = 7;
+export const LIST = document.querySelector(".news__container")
+export const BODY = document.querySelector('body')
+export const BUTTON = document.querySelector('.button')
+export const NEWS = document.querySelector('.news')
+export const PRELOADER = document.querySelector('.preloader')
+export const NOT_FOUND = document.querySelector('.error')
+export const RESULT = document.querySelector('.news')
+export const BAR = document.querySelector('.field')
+export const SEARCH = document.querySelector('.field__box')
+export const DATE = new Date()
+export const COMMIT_CONTAINER = document.querySelector('.swiper-wrapper')

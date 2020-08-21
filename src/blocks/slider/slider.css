@@ -48,12 +48,6 @@
     display: flex;
     border-radius: 16px;
   }
-  /* .swiper-slide:nth-child(2n){
-      width: 100%;
-  }
-  .swiper-slide:nth-child(3n){
-      width: 40%;
-  } */
   @media (max-width: 1040px) and (min-width: 320px){
     .swiper-button-prev,
     .swiper-button-next{

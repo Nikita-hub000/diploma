@@ -1,4 +1,3 @@
-
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,7 +9,11 @@ const isDev = process.env.NODE_ENV === 'development';
 
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { 
+        main: './src/index.js',
+        about: './src/about/about.js',
+        analytic: './src/analytic/analytic.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -65,13 +68,13 @@ module.exports = {
               new HtmlWebpackPlugin({
                 inject: false, 
                 template: './src/main.html',
-                chunks: ['main'], 
+                chunks: ['about'], 
                 filename: 'main.html'
               }),
               new HtmlWebpackPlugin({
                 inject: false, 
                 template: './src/about.html', 
-                chunks: ['main'],
+                chunks: ['analytic'],
                 filename: 'about.html'
               }),
             new WebpackMd5Hash(),
